@@ -18,6 +18,23 @@
 </head>
 
 <body>
+
+	<?php
+		$validado = true;
+		$erros = "";
+		$salario = $_GET["salario"];
+		
+		if($salario<0){
+			$validado = false;
+			$erros = $erros . "O salário não pode ser negativo!<br>";
+		}
+
+		if(!$validado){
+			header("Location: index.php");
+		}
+	
+	?>
+
 	<div class="container corpo">
 		<br>
 		<div class="row text-center">

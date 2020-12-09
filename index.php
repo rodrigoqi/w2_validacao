@@ -37,19 +37,19 @@
 			<div class="row">
 				<div class="col-md-6">
 					<label for="nome">Nome</label>
-					<input type="text" name="nome" value="">
+					<input type="text" name="nome" value="" oninvalid="this.setCustomValidity('Por favor, digite o seu nome')" oninput="this.setCustomValidity('')" required autocomplete="off">
 				</div>
 				<div class="col-md-2">
 					<label for="usuario">Nome de usuário</label>
-					<input type="text" name="usuario" value="" >
+					<input type="text" name="usuario" value="" pattern="[a-zA-Z]{5,}" oninvalid="this.setCustomValidity('Por favor, digite o seu nome de usuário (somente letras e com no mínimo 5 caracteres)')" oninput="this.setCustomValidity('')" required autocomplete="off">
 				</div>	
 				<div class="col-md-2">
 					<label for="senha">Senha</label>
-					<input type="text" name="senha" value="">
+					<input type="text" name="senha" value="" pattern="[a-zA-Z0-9]{8,}" oninvalid="this.setCustomValidity('Por favor, digite a sua senha (somente letras e números com no mínimo 8 caracteres)')" oninput="this.setCustomValidity('')" required autocomplete="off">
 				</div>
 				<div class="col-md-2">
 					Sexo:<br>
-					<input type="radio" name="sexo" value="Feminino">   Feminino<br>
+					<input type="radio" name="sexo" value="Feminino" required checked>   Feminino<br>
 					<input type="radio" name="sexo" value="Masculino">   Masculino
 				</div>
 			</div>
@@ -57,19 +57,19 @@
 			<div class="row">
 				<div class="col-md-2">
 					<label for="nascimento">Nascimento</label>
-					<input type="text" name="nascimento" value="">
+					<input type="date" name="nascimento" value="">
 				</div>
 				<div class="col-md-2">
 					<label for="telefone">Fone</label>
-					<input type="text" name="telefone" value="">
+					<input type="text" name="telefone" value="" pattern="[(]?[0-9]{2}[)]?[0-9]{4,5}-{0,1}[0-9]{4}" autocomplete="off">
 				</div>
 				<div class="col-md-2">
 					<label for="cpf">CPF</label>
-					<input type="text" name="cpf" value="">
+					<input type="text" name="cpf" value="" pattern="[0-9]{3}[.]{1}[0-9]{3}[.]{1}[0-9]{3}[-]{1}[0-9]{2}" oninvalid="this.setCustomValidity('Por favor, digite a seu CPF no formato xxx.xxx.xxx-xx')" oninput="this.setCustomValidity('')" autocomplete="off">
 				</div>
 				<div class="col-md-6">
 					<label for="email">E-mail</label>
-					<input type="text" name="email" value="">
+					<input type="email" name="email" value="" oninvalid="this.setCustomValidity('Por favor, digite um e-mail válido')" oninput="this.setCustomValidity('')" autocomplete="off">
 				</div>
 
 			</div>
@@ -77,15 +77,15 @@
 			<div class="row">
 			<div class="col-md-2">
 					<label for="salario">Salário</label>
-					<input type="text" name="salario" value="">
+					<input type="text" name="salario" value="" pattern="([0-9]{1,}[,]?[0-9]{0,10}" oninvalid="this.setCustomValidity('Por favor, digite o seu salário sem ponto para separação de milhares e nem unidade monetária')" oninput="this.setCustomValidity('')" autocomplete="off">
 				</div>
 				<div class="col-md-4">
 					<label for="cidade">Cidade</label>
-					<input type="text" name="cidade" value="">
+					<input type="text" name="cidade" value="" required pattern="[a-zA-Z\u00C0-\u00FF ]{3,}" oninvalid="this.setCustomValidity('Por favor, digite o nome da cidade com pelo menos 3 caracteres')" oninput="this.setCustomValidity('')" autocomplete="off"> 
 				</div>
 				<div class="col-md-2">
 					<label for="cep">CEP</label>
-					<input type="text" name="cep" value="">
+					<input type="text" name="cep" value="" pattern="[0-9]{5}[-][0-9]{3}" oninvalid="this.setCustomValidity('Por favor, digite o seu CEP no formato xxxxx-xxx')" oninput="this.setCustomValidity('')" autocomplete="off">
 				</div>
 				<div class="col-md-2">
 					<label for="uf">UF</label><br>
