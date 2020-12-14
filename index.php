@@ -61,7 +61,7 @@
 				</div>
 				<div class="col-md-2">
 					<label for="telefone">Fone</label>
-					<input type="text" name="telefone" value="" pattern="[(]?[0-9]{2}[)]?[0-9]{4,5}-{0,1}[0-9]{4}" autocomplete="off">
+					<input type="text" name="telefone" value="" pattern="[(]?[0-9]{2}[)]?[0-9]{4,5}[-]?[0-9]{4}" autocomplete="off">
 				</div>
 				<div class="col-md-2">
 					<label for="cpf">CPF</label>
@@ -85,7 +85,7 @@
 				</div>
 				<div class="col-md-2">
 					<label for="cep">CEP</label>
-					<input type="text" name="cep" value="" pattern="[0-9]{5}[-][0-9]{3}" oninvalid="this.setCustomValidity('Por favor, digite o seu CEP no formato xxxxx-xxx')" oninput="this.setCustomValidity('')" autocomplete="off">
+					<input type="text" name="cep" value="" pattern="[0-9]{5}[-]?[0-9]{3}" oninvalid="this.setCustomValidity('Por favor, digite o seu CEP no formato xxxxx-xxx')" oninput="this.setCustomValidity('')" autocomplete="off">
 				</div>
 				<div class="col-md-2">
 					<label for="uf">UF</label><br>
